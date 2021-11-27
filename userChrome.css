@@ -16,13 +16,15 @@
 }
 
 /* Remove botões da janela maximizar, minimizar e fechar */
-#window-controls { display:none!important; }
+#window-controls {
+  display: none !important;
+}
 
 /*===CORES===*/
 :root {
   --light-color: 255, 255, 255;
   --dark-color: 0, 0, 0;
-  --highlight-color: 50, 50, 50;
+  --highlight-color: 80, 80, 80;
 }
 
 :root {
@@ -98,7 +100,6 @@
 toolbar#nav-bar {
   background: rgba(var(--dark-color), 1) !important;
   box-shadow: none !important;
-  padding-bottom: 4px !important;
 }
 
 :root:-moz-lwtheme-brighttext,
@@ -113,7 +114,7 @@ tab[selected="true"] .tab-content {
 }
 
 tab[selected="true"] .tab-background {
-  background: rgba(var(--dark-color), 1) !important;
+  background: rgba(var(--highlight-color), 1) !important;
 }
 .tabbrowser-tab>.tab-stack>.tab-background:not([selected="true"]) {
   transition: all 0.3s ease !important;
@@ -141,7 +142,7 @@ tab[selected="true"] .tab-content {
 }
 
 tab[selected="true"] .tab-background {
-  background: rgba(var(--dark-color), 1) !important;
+  background: rgba(var(--highlight-color), 1) !important;
 }
 
 .tabbrowser-tab::after,
@@ -153,4 +154,32 @@ tab[selected="true"] .tab-background {
 .tab-close-button {
   transition: all 0.3s ease !important;
   border-radius: 4px !important;
+}
+
+#PersonalToolbar {
+  margin-top: 0px !important;
+  height:     28px !important;
+  padding-inline: 6px;
+}
+
+#personal-toolbar-empty-description, #PersonalToolbar .toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton) {
+    margin: 0 !important;
+}
+
+#PersonalToolbar .toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton) {
+    border-radius: 0 !important;
+}
+
+/* respectivamente
+ *
+ * abas menores
+ * titulo e ícone das abas mais a direita
+ * bordas quadradas
+ * diminui bordas do navegador
+*/
+:root {
+    --tab-min-height: 30px !important;
+    --inline-tab-padding: 8px !important;
+    --tab-border-radius: 0 !important;
+    --tab-block-margin: 5px !important;
 }
