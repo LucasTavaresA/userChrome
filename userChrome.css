@@ -30,6 +30,7 @@
 :root {
   --navbarWidth     : 50vw; /* Largura da barra de pesquisa o valor vw é uma porcentagem da largura do seu monitor
                                exemplo: 50% = 50vw*/
+  --toolbar-start-end-padding: 0 !important;
 }
 
 #TabsToolbar {
