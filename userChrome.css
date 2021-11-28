@@ -171,16 +171,66 @@ tab[selected="true"] .tab-background {
     border-radius: 0 !important;
 }
 
-/* respectivamente
- *
- * abas menores
- * titulo e ícone das abas mais a direita
- * bordas quadradas
- * diminui bordas do navegador
-*/
 :root {
-    --tab-min-height: 30px !important;
-    --inline-tab-padding: 8px !important;
-    --tab-border-radius: 0 !important;
-    --tab-block-margin: 5px !important;
+    --tab-min-height: 30px !important;    /* abas menores */
+    --inline-tab-padding: 8px !important; /* titulo e ícone das abas mais a direita */
+    --tab-border-radius: 0 !important;    /* bordas quadradas */
+    --tab-block-margin: 5px !important;   /* diminui bordas do navegador*/
+}
+
+/* Barra de procura(CTRL+F) compacta e no topo da tela */
+.browserContainer > findbar {
+  -moz-box-ordinal-group: 0;
+  position: fixed !important;
+  right: 1em;
+  border: 0 !important;
+
+  border-top: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+
+}
+.findbar-closebutton {
+  margin-inline-start: 0.5em !important;
+  vertical-align: middle !important;
+  margin-bottom: 0 !important;
+  height: inherit !important;
+}
+
+/* Remove o botão de recarregar pagina */
+#reload-button {
+  transition: 300ms !important; /* Animate icon hiding */
+  opacity: 0 !important; /* Make icon transparent */
+  -moz-margin-end: -2em !important; /* Hide icon by offsetting it */
+}
+
+/* remove bordas da barra de pesquisa */
+#urlbar, .searchbar-textbox {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove padding da barra de pesquisa */
+.urlbarView-row {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#urlbar-input-container {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  height: calc(var(--urlbar-toolbar-height) - 4px) !important;
+}
+#urlbar[breakout][breakout-extend] {
+  top: 2px !important;
+}
+.search-one-offs {
+  padding-block: 0px !important;
+}
+.search-panel-one-offs {
+  padding-left: 7px !important;
+}
+.searchbar-engine-one-off-item {
+  margin: 0px !important;
 }
