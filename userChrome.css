@@ -197,13 +197,6 @@ tab[selected="true"] .tab-background {
   height: inherit !important;
 }
 
-/* Remove o botão de recarregar pagina */
-#reload-button {
-  transition: 300ms !important; /* Animate icon hiding */
-  opacity: 0 !important; /* Make icon transparent */
-  -moz-margin-end: -2em !important; /* Hide icon by offsetting it */
-}
-
 /* remove bordas da barra de pesquisa */
 #urlbar, .searchbar-textbox {
   border: none !important;
