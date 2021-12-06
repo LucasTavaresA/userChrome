@@ -20,34 +20,13 @@
   display: none !important;
 }
 
-/*===CORES===*/
 :root {
-  --light-color: 255, 255, 255;
-  --dark-color: 0, 0, 0;
-  --highlight-color: 80, 80, 80;
-}
-
-:root {
-  --navbarWidth     : 50vw; /* Largura da barra de pesquisa o valor vw é uma porcentagem da largura do seu monitor
-                               exemplo: 50% = 50vw*/
-  --toolbar-start-end-padding: 0 !important;
-}
-
-#TabsToolbar {
-  margin-left : var(--navbarWidth) !important;
-}
-
-#nav-bar {
-  margin-right: calc(100vw - var(--navbarWidth)) !important;
-}
-
-#urlbar-container {
-  min-width   : 0px !important;
-}
-
-:root[uidensity="compact"] #nav-bar {
-  margin-top  : -37px !important;
-  height      : 37px !important;
+    --tab-min-height: 35px !important;    /* abas menores */
+    --tab-max-height: 35px !important;    /* abas menores */
+    --inline-tab-padding: 8px !important; /* titulo e ícone das abas mais a direita */
+    --tab-border-radius: 0 !important;    /* bordas quadradas */
+    --tab-block-margin: 4px !important;   /* diminui bordas do navegador*/
+    --navbarWidth: 50vw; /* Largura da barra de pesquisa o valor vw é uma porcentagem da largura do seu monitor */
 }
 
 :root:not([uidensity="compact"]):not([uidensity="touch"]) #nav-bar {
@@ -60,123 +39,56 @@
   height      : 49px !important;
 }
 
-#nav-bar {
-  background  : none !important;
-  box-shadow  : none !important;
+/*===CORES===*/
+:root {
+  --light-color: 255, 255, 255;
+  --dark-color: 0, 0, 0;
+  --highlight-color: 80, 80, 80;
 }
-
-#navigator-toolbox {
-  border      : none !important;
-}
-
-.titlebar-spacer {
-  display     : none !important;
-}
-
-#urlbar-background {
-  border      : none !important;
-}
-
-#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
-  box-shadow  : none !important;
-  background  : none !important;
-}
-
 .urlbar-icon, .urlbar-icon:hover, #userContext-indicator, #userContext-label {
   fill        : #FFFFFF !important;
   color       : #FFFFFF !important;
 }
-
 #titlebar #TabsToolbar {
   background: rgba(var(--dark-color), 1) !important;
 }
-
 #PersonalToolbar {
   background: rgba(var(--dark-color), 1) !important;
   color: rgba(var(--light-color), 1) !important;
   padding-bottom: 6px !important;
   padding-top: 1px !important;
 }
-
 toolbar#nav-bar {
   background: rgba(var(--dark-color), 1) !important;
   box-shadow: none !important;
 }
-
 :root:-moz-lwtheme-brighttext,
 .sidebar-panel[lwt-sidebar-brighttext],
 body[lwt-sidebar-brighttext] {
 	--main-bgcolor: var(--dark-color);
 	--transparent-bgcolor: var(--dark-color);
 }
-
 tab[selected="true"] .tab-content {
   color: rgba(var(--light-color), 1) !important;
 }
-
 tab[selected="true"] .tab-background {
   background: rgba(var(--highlight-color), 1) !important;
 }
-.tabbrowser-tab>.tab-stack>.tab-background:not([selected="true"]) {
-  transition: all 0.3s ease !important;
-}
-
 .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"]) {
   background-color: rgba(var(--transparent-bgcolor), 0.7) !important;
 }
-
-.tab-line {
-  height: 0px !important;
-}
-
-.tabbrowser-tab {
-  margin-right: 5px !important;
-}
-
 .tabbrowser-tab:not([visuallyselected="true"]),
 .tabbrowser-tab:-moz-lwtheme {
   color: rgba(var(--light-color), 1) !important;
 }
-
 tab[selected="true"] .tab-content {
   color: rgba(var(--light-color), 1) !important;
 }
-
 tab[selected="true"] .tab-background {
   background: rgba(var(--highlight-color), 1) !important;
 }
 
-.tabbrowser-tab::after,
-.tabbrowser-tab::before {
-  border-left: 0 !important;
-  opacity: 0 !important;
-}
 
-.tab-close-button {
-  transition: all 0.3s ease !important;
-  border-radius: 4px !important;
-}
-
-#PersonalToolbar {
-  margin-top: 0px !important;
-  height:     28px !important;
-  padding-inline: 6px;
-}
-
-#personal-toolbar-empty-description, #PersonalToolbar .toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton) {
-    margin: 0 !important;
-}
-
-#PersonalToolbar .toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton) {
-    border-radius: 0 !important;
-}
-
-:root {
-    --tab-min-height: 30px !important;    /* abas menores */
-    --inline-tab-padding: 8px !important; /* titulo e ícone das abas mais a direita */
-    --tab-border-radius: 0 !important;    /* bordas quadradas */
-    --tab-block-margin: 5px !important;   /* diminui bordas do navegador*/
-}
 
 /* Barra de procura(CTRL+F) compacta e no topo da tela */
 .browserContainer > findbar {
@@ -227,3 +139,61 @@ tab[selected="true"] .tab-background {
 .searchbar-engine-one-off-item {
   margin: 0px !important;
 }
+
+/* Aba e barra de favoritos minimalista */
+.tab-line {
+  height: 0px !important;
+}
+.tabbrowser-tab {
+  margin-right: 0 !important;
+  width: unset !important;
+}
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  border-left: 0 !important;
+  opacity: 0 !important;
+}
+.tab-close-button {
+  border-radius: 0 !important;
+}
+#PersonalToolbar {
+  margin-top: 0px !important;
+  height:     30px !important;
+  padding-inline: 6px;
+}
+#personal-toolbar-empty-description, #PersonalToolbar .toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton) {
+    margin: 0 !important;
+}
+#PersonalToolbar .toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton) {
+    border-radius: 0 !important;
+}
+:root {
+  --toolbar-start-end-padding: 0 !important;
+}
+#TabsToolbar {
+  margin-left : var(--navbarWidth) !important;
+}
+#nav-bar {
+  margin-right: calc(100vw - var(--navbarWidth)) !important;
+}
+#urlbar-container {
+  min-width   : 0px !important;
+}
+#nav-bar {
+  background  : none !important;
+  box-shadow  : none !important;
+}
+#navigator-toolbox {
+  border      : none !important;
+}
+.titlebar-spacer {
+  display     : none !important;
+}
+#urlbar-background {
+  border      : none !important;
+}
+#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
+  box-shadow  : none !important;
+  background  : none !important;
+}
+
