@@ -15,6 +15,11 @@
   visibility: unset !important;
 }
 
+/* remove botões de janela no modo tela cheia */
+.titlebar-buttonbox {
+    display: none !important;
+}
+
 /* Remove botões da janela maximizar, minimizar e fechar */
 #window-controls {
   display: none !important;
