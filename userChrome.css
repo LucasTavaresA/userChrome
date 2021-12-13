@@ -26,11 +26,7 @@
 }
 
 :root {
-    --tab-min-height: 35px !important;    /* abas menores */
-    --tab-max-height: 35px !important;    /* abas menores */
-    --inline-tab-padding: 8px !important; /* titulo e ícone das abas mais a direita */
     --tab-border-radius: 0 !important;    /* bordas quadradas */
-    --tab-block-margin: 4px !important;   /* diminui bordas do navegador*/
     --navbarWidth: 50vw; /* Largura da barra de pesquisa o valor vw é uma porcentagem da largura do seu monitor */
 }
 
