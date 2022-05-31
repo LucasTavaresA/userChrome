@@ -15,6 +15,11 @@
   visibility: unset !important;
 }
 
+/* remove a toda a barra do firefox */
+#navigator-toolbox {
+  margin-top: -46px;
+}
+
 /* remove botões de janela no modo tela cheia */
 .titlebar-buttonbox {
     display: none !important;
@@ -27,7 +32,6 @@
 
 :root {
     --tab-border-radius: 0 !important;    /* bordas quadradas */
-    --navbarWidth: 50vw; /* Largura da barra de pesquisa o valor vw é uma porcentagem da largura do seu monitor */
 }
 
 :root:not([uidensity="compact"]):not([uidensity="touch"]) #nav-bar {
@@ -159,7 +163,7 @@ tab[selected="true"] .tab-background {
 }
 #PersonalToolbar {
   margin-top: 0px !important;
-  height:     30px !important;
+  height:     35px !important;
   padding-inline: 6px;
 }
 #personal-toolbar-empty-description, #PersonalToolbar .toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton) {
@@ -197,4 +201,3 @@ tab[selected="true"] .tab-background {
   box-shadow  : none !important;
   background  : none !important;
 }
-
